@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Moderne | Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Blog<span>Moderne</span></a>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="#">Catégories</a>
+                <a href="#">À propos</a>
+                <a href="#">Contact</a>
+                <a href="editor.html" class="btn-new-post">Nouvel article</a>
+                <a href="admin/dashboard.html" class="btn-admin"><i class="fas fa-user-cog"></i></a>
+            </div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Partagez vos idées avec le monde</h1>
+            <p>Un espace moderne pour exprimer votre créativité</p>
+            <a href="editor.html" class="btn-primary">Commencer à écrire</a>
+        </div>
+    </header>
+
+    <!-- Articles récents -->
+    <section class="featured-posts">
+        <div class="container">
+            <h2 class="section-title">Articles récents</h2>
+            <div class="posts-grid" id="posts-container">
+                <!-- Les articles seront chargés dynamiquement ici -->
+            </div>
+            <a href="#" class="btn-secondary">Voir plus d'articles</a>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Abonnez-vous à notre newsletter</h2>
+                <p>Recevez les derniers articles directement dans votre boîte mail.</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit" class="btn-primary">S'abonner</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BlogModerne</h3>
+                    <p>Une plateforme moderne pour partager vos idées et connaissances avec le monde.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="#">Articles populaires</a></li>
+                        <li><a href="#">Catégories</a></li>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="#">Technologie</a></li>
+                        <li><a href="#">Voyage</a></li>
+                        <li><a href="#">Cuisine</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Business</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact@blogmoderne.com</li>
+                        <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Paris, France</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BlogModerne. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

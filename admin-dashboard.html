@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord | Blog Moderne</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body class="admin-dashboard">
+    <!-- Barre de navigation admin -->
+    <nav class="admin-navbar">
+        <div class="container">
+            <a href="dashboard.html" class="logo">Blog<span>Moderne</span> <small>Admin</small></a>
+            <div class="admin-nav-links">
+                <a href="dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a>
+                <a href="posts.html"><i class="fas fa-newspaper"></i> Articles</a>
+                <a href="#"><i class="fas fa-comments"></i> Commentaires</a>
+                <a href="#"><i class="fas fa-users"></i> Utilisateurs</a>
+                <a href="#"><i class="fas fa-cog"></i> Paramètres</a>
+                <a href="../../index.html" class="btn-view-site"><i class="fas fa-external-link-alt"></i> Voir le site</a>
+            </div>
+            <div class="admin-user">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Admin">
+                <div class="user-dropdown">
+                    <span>Jean Dupont <i class="fas fa-caret-down"></i></span>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fas fa-user"></i> Profil</a>
+                        <a href="#"><i class="fas fa-cog"></i> Paramètres</a>
+                        <a href="#"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="admin-main">
+        <div class="container">
+            <div class="admin-header">
+                <h1>Tableau de bord</h1>
+                <div class="breadcrumb">
+                    <a href="dashboard.html">Tableau de bord</a>
+                </div>
+            </div>
+
+            <!-- Statistiques -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Articles</h3>
+                        <p id="total-posts">0</p>
+                    </div>
+                    <a href="posts.html" class="stat-link">Voir tous <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Commentaires</h3>
+                        <p id="total-comments">0</p>
+                    </div>
+                    <a href="#" class="stat-link">Voir tous <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Utilisateurs</h3>
+                        <p id="total-users">0</p>
+                    </div>
+                    <a href="#" class="stat-link">Voir tous <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Vues</h3>
+                        <p id="total-views">0</p>
+                    </div>
+                    <a href="#" class="stat-link">Voir stats <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Derniers articles -->
+            <div class="admin-section">
+                <div class="section-header">
+                    <h2>Derniers articles</h2>
+                    <a href="posts.html" class="btn-secondary">Voir tous</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Titre</th>
+                                <th>Auteur</th>
+                                <th>Catégorie</th>
+                                <th>Date</th>
+                                <th>Statut</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recent-posts">
+                            <!-- Les articles seront chargés dynamiquement ici -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Derniers commentaires -->
+            <div class="admin-section">
+                <div class="section-header">
+                    <h2>Derniers commentaires</h2>
+                    <a href="#" class="btn-secondary">Voir tous</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Auteur</th>
+                                <th>Commentaire</th>
+                                <th>Article</th>
+                                <th>Date</th>
+                                <th>Statut</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recent-comments">
+                            <!-- Les commentaires seront chargés dynamiquement ici -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Activité récente -->
+            <div class="admin-section">
+                <div class="section-header">
+                    <h2>Activité récente</h2>
+                </div>
+                <div class="activity-feed" id="activity-feed">
+                    <!-- L'activité sera chargée dynamiquement ici -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article | Blog Moderne</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Blog<span>Moderne</span></a>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="#">Catégories</a>
+                <a href="#">À propos</a>
+                <a href="#">Contact</a>
+                <a href="editor.html" class="btn-new-post">Nouvel article</a>
+                <a href="admin/dashboard.html" class="btn-admin"><i class="fas fa-user-cog"></i></a>
+            </div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenu de l'article -->
+    <main class="post-page">
+        <div class="container">
+            <article class="post-full" id="post-content">
+                <!-- Le contenu de l'article sera chargé dynamiquement ici -->
+            </article>
+
+            <!-- Auteur -->
+            <div class="post-author">
+                <div class="author-avatar">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Auteur">
+                </div>
+                <div class="author-info">
+                    <h3>Jean Dupont</h3>
+                    <p>Éditeur en chef chez BlogModerne. Passionné de technologie et de design. Aime partager ses connaissances avec la communauté.</p>
+                    <div class="author-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="post-actions">
+                <button class="btn-like" id="like-btn">
+                    <i class="far fa-heart"></i> <span id="like-count">0</span> J'aime
+                </button>
+                <div class="share-buttons">
+                    <span>Partager :</span>
+                    <a href="#" class="btn-share twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="btn-share facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="btn-share linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="btn-share whatsapp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="admin-actions" id="admin-actions">
+                    <a href="editor.html?edit=1" class="btn-edit"><i class="fas fa-edit"></i> Modifier</a>
+                    <button class="btn-delete" id="delete-post"><i class="fas fa-trash"></i> Supprimer</button>
+                </div>
+            </div>
+
+            <!-- Commentaires -->
+            <section class="comments-section">
+                <h2 class="section-title">Commentaires <span id="comments-count">(0)</span></h2>
+                
+                <form class="comment-form" id="comment-form">
+                    <div class="form-group">
+                        <textarea id="comment-text" placeholder="Ajoutez un commentaire..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="comment-name" placeholder="Votre nom" required>
+                        <input type="email" id="comment-email" placeholder="Votre email (ne sera pas affiché)" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Publier le commentaire</button>
+                </form>
+
+                <div class="comments-list" id="comments-list">
+                    <!-- Les commentaires seront chargés dynamiquement ici -->
+                </div>
+            </section>
+
+            <!-- Articles similaires -->
+            <section class="related-posts">
+                <h2 class="section-title">Articles similaires</h2>
+                <div class="posts-grid" id="related-posts">
+                    <!-- Les articles similaires seront chargés dynamiquement ici -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BlogModerne</h3>
+                    <p>Une plateforme moderne pour partager vos idées et connaissances avec le monde.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="#">Articles populaires</a></li>
+                        <li><a href="#">Catégories</a></li>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="#">Technologie</a></li>
+                        <li><a href="#">Voyage</a></li>
+                        <li><a href="#">Cuisine</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Business</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact@blogmoderne.com</li>
+                        <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Paris, France</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BlogModerne. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/comments.js"></script>
+</body>
+</html>
